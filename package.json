@@ -1,0 +1,10 @@
+{
+  "name": "ministral-landing",
+  "version": "1.0.0",
+  "description": "Landing page oficial do Ministral — Gestão Ministerial Inteligente",
+  "private": true,
+  "scripts": {
+    "dev": "npx -y serve . -p 3333",
+    "preview": "npx -y serve . -p 3333"
+  }
+}
