@@ -145,6 +145,21 @@
                     <p>Assistente de IA que analisa padrões, sugere escalas otimizadas e oferece insights sobre seu
                         ministério.</p>
                 </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon emerald">💬</div>
+                    <h3>Integração com WhatsApp</h3>
+                    <p>Notificações automáticas de escalas, lembretes e comunicados enviados diretamente no WhatsApp de cada membro.</p>
+                </div>
+                <div class="feature-card reveal delay-1">
+                    <div class="feature-icon blue">📆</div>
+                    <h3>Google Calendar</h3>
+                    <p>Sincronização bidirecional das suas escalas e eventos direto com a agenda do Google Calendar de forma fácil.</p>
+                </div>
+                <div class="feature-card reveal delay-2">
+                    <div class="feature-icon gold">📌</div>
+                    <h3>Mural e Aniversários</h3>
+                    <p>Mantenha sua equipe informada com um mural de avisos dedicado e nunca esqueça os aniversariantes do mês.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -459,9 +474,9 @@
             } else if (text.includes('grátis') || text.includes('cadastrar') || text.includes('começar')) {
                 btn.href = APP_URL + '/?register=true';
             } else if (text.includes('pro')) {
-                btn.href = APP_URL + '/?register=true&plan=pro';
+                btn.href = 'https://buy.stripe.com/7sY7sD8wifg5azs0H90gw00';
             } else if (text.includes('enterprise')) {
-                btn.href = APP_URL + '/?register=true&plan=enterprise';
+                btn.href = 'https://buy.stripe.com/cNiaEP6oaaZP9vo0H90gw01';
             }
         });
 
