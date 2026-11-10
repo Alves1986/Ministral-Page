@@ -61,7 +61,8 @@ const faqs = [
   ['Como funciona a parte de pagamentos?', 'O fluxo de assinatura e cobrança é organizado via Asaas. Ao clicar no checkout do seu plano, você será direcionado para a página segura de pagamento do Asaas.'],
   ['O pagamento via Asaas é seguro?', 'Sim. O pagamento acontece no ambiente de checkout do Asaas, separado da área de gestão do Ministral. A página exibirá as opções de pagamento disponíveis para o plano escolhido.'],
   ['Quando meu acesso é liberado?', 'Depois da confirmação do pagamento, a ativação segue o fluxo definido para o seu plano. Se precisar de ajuda, use o suporte do Ministral para acompanhar a contratação.'],
-  ['Posso fazer upgrade do Trial para o Pro ou Enterprise?', 'Sim. Você pode começar pelo Trial e escolher um plano pago quando sua equipe precisar de mais membros, ministérios, relatórios e suporte.'],
+  ['O que está incluído no Trial?', 'Durante 30 dias, você pode experimentar o fluxo operacional completo do Ministral: escalas, repertório, relatórios básicos, regras de conflitos, notificações e IA básica. O Trial tem limites de volume: até 30 membros por ministério, 2 ministérios e 25 usos de IA por semana.'],
+  ['Posso fazer upgrade do Trial para o Pro ou Enterprise?', 'Sim. Você pode começar pelo Trial completo e escolher um plano pago quando sua equipe precisar de mais membros, ministérios, IA avançada, governança ou suporte prioritário.'],
   ['Como funciona o cancelamento?', 'A solicitação de cancelamento deve ser feita pelo canal de suporte do Ministral. As condições e a data de encerramento seguem os termos apresentados no checkout.'],
   ['Posso começar com a minha equipe atual?', 'Sim. A ideia é partir da sua realidade atual, organizar pessoas e escalas e evoluir o uso conforme a operação ganhar clareza.'],
   ['E se eu precisar de ajuda para implantar?', 'O próximo passo é conversar com o time do Ministral para entender seu cenário e indicar o melhor caminho de ativação.']
@@ -74,8 +75,8 @@ const pricingCards = [
     description: '30 dias para testar',
     checkout: 'https://ministral.vercel.app/?register=true',
     tone: 'trial',
-    features: ['Até 30 membros por ministério', 'Até 2 ministérios', 'Editor de Escala básico', 'Disponibilidade inteligente', 'Avisos e Comunicados', 'Ranking e Destaques'],
-    unavailable: ['Relatórios avançados', 'Integrações Spotify/YouTube', 'Notificações Push']
+    features: ['Até 30 membros por ministério', 'Até 2 ministérios', 'Editor de Escala completo', 'Disponibilidade inteligente', 'Avisos e Comunicados', 'Ranking e Destaques', 'Relatórios básicos', 'Regras de conflitos', 'Repertório e integrações', 'Notificações Push', 'IA básica — 25 usos por semana'],
+    unavailable: ['Suporte prioritário e recursos Enterprise']
   },
   {
     name: 'Pro',
@@ -180,7 +181,7 @@ app.innerHTML = `
     </section>
 
     <section class="offer-section pricing-section section-pad" id="assinar">
-      <div class="container pricing-intro"><div><div class="eyebrow"><span class="eyebrow-mark"></span> Escolha o seu ritmo</div><h2>Comece simples.<br/><em>Evolua sem travar.</em></h2></div><p>Tenha 30 dias para experimentar ou escolha o plano que acompanha o tamanho da sua operação. Pagamentos e assinatura processados via Asaas.</p></div>
+      <div class="container pricing-intro"><div><div class="eyebrow"><span class="eyebrow-mark"></span> Escolha o seu ritmo</div><h2>Experimente tudo.<br/><em>Evolua no seu tempo.</em></h2></div><p>Tenha 30 dias para testar o fluxo operacional completo do Ministral. O upgrade acompanha o crescimento da sua equipe, com mais capacidade, governança e suporte. Pagamentos e assinatura processados via Asaas.</p></div>
       <div class="container pricing-grid">${pricingCards.map((plan) => `<article class="pricing-card ${plan.featured ? 'pricing-card-featured' : ''} ${plan.tone}"><div class="pricing-card-top"><span class="pricing-name">${plan.name}</span>${plan.featured ? '<span class="pricing-badge">mais escolhido</span>' : ''}</div><p class="pricing-description">${plan.description}</p><div class="pricing-price">${plan.price}${plan.suffix ? `<small>${plan.suffix}</small>` : ''}</div><div class="pricing-divider"></div><ul class="pricing-features">${plan.features.map((feature) => `<li>${icon('check', 14)} ${feature}</li>`).join('')}${plan.unavailable.map((feature) => `<li class="pricing-unavailable">${icon('close', 14)} ${feature}</li>`).join('')}</ul><a class="button ${plan.featured ? 'button-lime' : 'button-light'} button-full" href="${plan.checkout}" target="_blank" rel="noreferrer">${plan.name === 'Trial' ? 'Testar grátis' : 'Assinar via Asaas'} ${icon('arrow', 16)}</a></article>`).join('')}</div>
       <div class="container pricing-footnote"><span>${icon('shield', 15)} Pagamento simples e seguro via Asaas</span><span>Comece pelo Trial e faça upgrade quando sua equipe crescer.</span></div>
     </section>
