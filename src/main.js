@@ -80,7 +80,7 @@ const pricingCards = [
   },
   {
     name: 'Pro',
-    price: 'R$ 99,00',
+    price: 'R$ 49,00',
     suffix: '/mês',
     description: 'Para ministérios que levam a sério',
     checkout: 'https://www.asaas.com/000/c/5ag05of6an6oi6w7',
@@ -91,7 +91,7 @@ const pricingCards = [
   },
   {
     name: 'Enterprise',
-    price: 'R$ 149,00',
+    price: 'R$ 99,00',
     suffix: '/mês',
     description: 'Controle total e suporte dedicado',
     checkout: 'https://www.asaas.com/000/c/x6no3kwe2ylb4a13',
