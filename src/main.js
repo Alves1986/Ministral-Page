@@ -4,8 +4,8 @@ const env = import.meta.env || {};
 const COMPANY_NAME = env.VITE_COMPANY_NAME || 'Ministral Tecnologia [Configurável via VITE_COMPANY_NAME]';
 const COMPANY_CNPJ = env.VITE_COMPANY_CNPJ || '00.000.000/0001-00 [Configurável via VITE_COMPANY_CNPJ]';
 const COMPANY_ADDRESS = env.VITE_COMPANY_ADDRESS || 'Endereço comercial configurável via VITE_COMPANY_ADDRESS';
-const DPO_EMAIL = env.VITE_DPO_EMAIL || 'contato.ministral@gmail.com';
-const SUPPORT_EMAIL = env.VITE_SUPPORT_EMAIL || 'contato.ministral@gmail.com';
+const DPO_EMAIL = env.VITE_DPO_EMAIL || 'suporte@ministral.app';
+const SUPPORT_EMAIL = env.VITE_SUPPORT_EMAIL || 'suporte@ministral.app';
 const LEGAL_VERSION = 'v2026.11';
 const COOKIE_STORAGE_KEY = 'ministral_lp_cookie_consent_v1';
 
@@ -107,7 +107,7 @@ const pricingCards = [
     name: 'Trial',
     price: 'Grátis',
     description: '30 dias para testar · sem cartão de crédito',
-    checkout: 'https://ministral.vercel.app/?register=true',
+    checkout: 'https://ministral.app/?register=true',
     tone: 'trial',
     legalNote: 'Sem cobrança automática ao fim dos 30 dias.',
     features: ['Até 30 membros por ministério', 'Até 2 ministérios', 'Editor de Escala completo', 'Disponibilidade inteligente', 'Avisos e Comunicados', 'Ranking e Destaques', 'Relatórios básicos', 'Regras de conflitos', 'Repertório e integrações', 'Notificações Push', 'IA básica — 25 usos por semana (com aviso de conteúdo gerado por IA)'],
@@ -152,14 +152,14 @@ app.innerHTML = `
         ${navItems.map(([label, href]) => `<a href="${href}">${label}</a>`).join('')}
       </nav>
       <div class="header-actions">
-        <a class="login-link" href="https://ministral.vercel.app" target="_blank" rel="noreferrer">Acessar sistema ${icon('external', 15)}</a>
+        <a class="login-link" href="https://ministral.app" target="_blank" rel="noreferrer">Acessar sistema ${icon('external', 15)}</a>
         <a class="button button-dark button-small" href="#assinar">Quero começar ${icon('arrow', 16)}</a>
       </div>
       <button class="mobile-menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">${icon('menu', 23)}</button>
     </div>
     <div class="mobile-nav" aria-hidden="true">
       ${navItems.map(([label, href]) => `<a href="${href}">${label}</a>`).join('')}
-      <a href="https://ministral.vercel.app" target="_blank" rel="noreferrer">Acessar sistema ${icon('external', 15)}</a>
+      <a href="https://ministral.app" target="_blank" rel="noreferrer">Acessar sistema ${icon('external', 15)}</a>
       <a class="button button-dark" href="#assinar">Quero começar ${icon('arrow', 16)}</a>
     </div>
   </header>
@@ -189,7 +189,7 @@ app.innerHTML = `
     </section>
 
     <section class="real-product-section section-pad">
-      <div class="container real-product-grid"><div class="real-product-image-wrap"><img src="/ministral-schedule-fictional.png" alt="Central de Escalas do Ministral com perfis ilustrativos" class="real-product-image" /><div class="real-image-caption"><span class="status-dot"></span><span>captura real do sistema · perfis ilustrativos</span></div></div><div class="real-product-copy"><div class="eyebrow"><span class="eyebrow-mark"></span> Produto de verdade, rotina de verdade</div><h2>Da agenda do culto ao detalhe da <em>escala.</em></h2><p>A Central de Escalas reúne cultos, vagas, funções e regras de agenda em uma visão operacional única. Organize a equipe, libere a escala e acompanhe cada compromisso sem ruído.</p><div class="real-product-points"><span>${icon('calendar', 16)} cultos e programações do mês</span><span>${icon('users', 16)} membros organizados por função</span><span>${icon('spark', 16)} escala liberada com poucos cliques</span></div><a class="text-link" href="https://ministral.vercel.app" target="_blank" rel="noreferrer">Ver o painel real <span>${icon('external', 15)}</span></a></div></div>
+      <div class="container real-product-grid"><div class="real-product-image-wrap"><img src="/ministral-schedule-fictional.png" alt="Central de Escalas do Ministral com perfis ilustrativos" class="real-product-image" /><div class="real-image-caption"><span class="status-dot"></span><span>captura real do sistema · perfis ilustrativos</span></div></div><div class="real-product-copy"><div class="eyebrow"><span class="eyebrow-mark"></span> Produto de verdade, rotina de verdade</div><h2>Da agenda do culto ao detalhe da <em>escala.</em></h2><p>A Central de Escalas reúne cultos, vagas, funções e regras de agenda em uma visão operacional única. Organize a equipe, libere a escala e acompanhe cada compromisso sem ruído.</p><div class="real-product-points"><span>${icon('calendar', 16)} cultos e programações do mês</span><span>${icon('users', 16)} membros organizados por função</span><span>${icon('spark', 16)} escala liberada com poucos cliques</span></div><a class="text-link" href="https://ministral.app" target="_blank" rel="noreferrer">Ver o painel real <span>${icon('external', 15)}</span></a></div></div>
     </section>
 
     <section class="statement section-pad" id="como-funciona">
@@ -254,7 +254,7 @@ app.innerHTML = `
           <div class="eyebrow"><span class="eyebrow-mark"></span> Perguntas frequentes</div>
           <h2>O que você precisa saber antes de <em>começar.</em></h2>
           <p>Transparência total sobre funcionamento, assinatura, cancelamento e proteção de dados pessoais (LGPD).</p>
-          <a class="text-link" href="https://ministral.vercel.app" target="_blank" rel="noreferrer">Acessar o sistema <span>${icon('external', 15)}</span></a>
+          <a class="text-link" href="https://ministral.app" target="_blank" rel="noreferrer">Acessar o sistema <span>${icon('external', 15)}</span></a>
           <a class="text-link contact-email" href="mailto:${SUPPORT_EMAIL}">${SUPPORT_EMAIL} <span>${icon('arrow', 15)}</span></a>
         </div>
         <div class="faq-list">
@@ -291,7 +291,7 @@ app.innerHTML = `
         <button type="button" class="footer-link-button" data-open-legal="terms">Termos de Uso (${LEGAL_VERSION})</button>
         <button type="button" class="footer-link-button" data-open-legal="privacy">Política de Privacidade (${LEGAL_VERSION})</button>
         <button type="button" class="footer-link-button" id="reopen-cookie-banner">Preferências de Cookies</button>
-        <a href="https://ministral.vercel.app" target="_blank" rel="noreferrer">Acessar sistema ${icon('external', 14)}</a>
+        <a href="https://ministral.app" target="_blank" rel="noreferrer">Acessar sistema ${icon('external', 14)}</a>
       </div>
     </div>
     <div class="container footer-bottom">
@@ -349,7 +349,7 @@ app.innerHTML = `
         </div>
       </div>
       <div class="legal-modal-footer">
-        <a class="text-link" href="https://ministral.vercel.app/?register=true" target="_blank" rel="noreferrer">Abrir documentos completos no App ${icon('external', 14)}</a>
+        <a class="text-link" href="https://ministral.app/?register=true" target="_blank" rel="noreferrer">Abrir documentos completos no App ${icon('external', 14)}</a>
         <button type="button" class="button button-dark button-small" id="ok-legal-modal">Entendi</button>
       </div>
     </div>
